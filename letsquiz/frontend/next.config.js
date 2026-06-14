@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+
 const nextConfig = {
   reactStrictMode: false,
   eslint: {
@@ -11,22 +13,23 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:5000/api/:path*',
+        destination: `${backendUrl}/api/:path*`,
       },
       {
         source: '/uploads/:path*',
-        destination: 'http://localhost:5000/uploads/:path*',
+        destination: `${backendUrl}/uploads/:path*`,
       },
       {
         source: '/toggleActivityStatus/:path*',
-        destination: 'http://localhost:5000/toggleActivityStatus/:path*',
+        destination: `${backendUrl}/toggleActivityStatus/:path*`,
       },
       {
         source: '/toggleschedule/:path*',
-        destination: 'http://localhost:5000/toggleschedule/:path*',
+        destination: `${backendUrl}/toggleschedule/:path*`,
       },
     ];
   },
 };
 
 export default nextConfig;
+
