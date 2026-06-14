@@ -68,6 +68,13 @@ function main() {
   if (fs.existsSync(reqFilesPath)) {
     try {
       const data = JSON.parse(fs.readFileSync(reqFilesPath, 'utf8'));
+      
+      // Update appDir and outputFileTracingRoot to rootDir
+      data.appDir = rootDir;
+      if (data.config && data.config.experimental) {
+        data.config.experimental.outputFileTracingRoot = rootDir;
+      }
+      
       if (data.ignore && Array.isArray(data.ignore)) {
         data.ignore = data.ignore.map(p => {
           const absolutePath = path.resolve(originalNextDir, p);
@@ -76,7 +83,7 @@ function main() {
         });
       }
       fs.writeFileSync(reqFilesPath, JSON.stringify(data, null, 2), 'utf8');
-      console.log('Fixed required-server-files.json');
+      console.log('Fixed required-server-files.json with root appDir');
     } catch (err) {
       console.error(`Error processing required-server-files.json:`, err);
     }
