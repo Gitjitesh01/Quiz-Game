@@ -51,7 +51,7 @@ app.use(
 app.use(cookieParser());
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.put("/toggleActivityStatus/:id", async (req, res) => {
   const { id } = req.params;
@@ -132,8 +132,8 @@ app.get("/api", (req, res) => {
 
 // ***********
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname,'../frontend/dist', 'index.html'));
+app.get("/", (req, res) => {
+  res.send("LetsQuiz Backend API is running!");
 });
 
 app.get("*", (req, res) => {
