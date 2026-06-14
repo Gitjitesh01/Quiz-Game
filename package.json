@@ -13,7 +13,7 @@
     "dev:backend": "npm run dev --prefix letsquiz/backend",
     "dev:frontend": "npm run dev --prefix letsquiz/frontend",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "build": "npm run build:frontend && node -e \"const fs = require('fs'); fs.rmSync('.next', { recursive: true, force: true }); fs.renameSync('letsquiz/frontend/.next', '.next'); fs.rmSync('public', { recursive: true, force: true }); fs.cpSync('letsquiz/frontend/public', 'public', { recursive: true });\"",
+    "build": "npm run build:frontend && node -e \"const fs = require('fs'); fs.rmSync('.next', { recursive: true, force: true }); fs.renameSync('letsquiz/frontend/.next', '.next'); fs.rmSync('public', { recursive: true, force: true }); fs.cpSync('letsquiz/frontend/public', 'public', { recursive: true });\" && node fix-vercel-build.js",
     "build:frontend": "npm run build --prefix letsquiz/frontend",
     "start": "npm start --prefix letsquiz/backend"
   },
