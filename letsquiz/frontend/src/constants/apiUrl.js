@@ -1,4 +1,4 @@
-export const baseUrl1 = import.meta.env.VITE_API_URL || window.location.origin;
+export const baseUrl1 = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : '');
 export const baseUrl = baseUrl1.endsWith('/') ? `${baseUrl1}api/` : `${baseUrl1}/api/`;
 export const USER = {
   get LOGIN() {
