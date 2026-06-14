@@ -1,7 +1,6 @@
 import React from "react";
 import swal from "sweetalert";
 
-("react");
 import Footer from "../component/Home/Footer";
 import Hero from "../component/Home/Hero";
 import NumberTicker from "../component/NumberTicker/index";
