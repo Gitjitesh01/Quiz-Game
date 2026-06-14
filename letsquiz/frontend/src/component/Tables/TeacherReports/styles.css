@@ -1,0 +1,49 @@
+.ranking-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .row {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+  }
+  
+  /* Rank animation */
+  .rank-change-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .rank-change-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+  /* Name, Email, and Score animations */
+  .name-change-enter, .email-change-enter, .score-change-enter {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .name-change-enter-active, .email-change-enter-active, .score-change-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+  /* If you want to add exit animations, you can add them similarly */
+  

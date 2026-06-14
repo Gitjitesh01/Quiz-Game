@@ -1,0 +1,21 @@
+/* .chart-container {
+    width: 600px; 
+    height: 300px; 
+    margin: 20px; 
+    text-align: center;
+  } */
+
+  .bar-container{
+    width: 800px; /* Set your desired width */
+    height: 300px; /* Set your desired height */
+    margin: 50px; /* Add margin if needed */
+    text-align: center;
+  }
+  .bar-container h1{
+    margin: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 20px;
+  }

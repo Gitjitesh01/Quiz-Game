@@ -1,0 +1,17 @@
+#default-sidebar {
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0,0,0,); /* Adjust the opacity as needed */
+  }
+  .backgroundGlass{
+    background:linear-gradient(to bottom right,transparent, rgba(32, 185, 255, 0.9),rgba(32, 177, 255, 0.9),rgba(32, 218, 255, 0.9),transparent)
+}
+.menuItem{
+   
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.5);  
+        margin: auto;
+        max-width: 90%;
+        
+    color: black;
+}

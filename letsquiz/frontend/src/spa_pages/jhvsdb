@@ -1,0 +1,414 @@
+<div className="item-center flex justify-center  gap-2 px-6 py-0">
+{process == 0 ? (
+  <div className="item-center flex scale-75 h-fit -mt-40 w-full flex-col justify-center gap-3 rounded-3xl p-10">
+    <div>
+      <div className="flex items-center justify-center gap-4 text-3xl font-bold text-blue-500">
+        <h1 className="underline ">Select an option to pay </h1>
+        <div className="flex items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white">
+          <h2 className="font-light">{currentSub?.subscriptionName}</h2>
+          <h2 className="text-3xl font-light text-white">
+            {currentSub?.amount !== 0 && "₹"}
+            {currentSub?.amount === 0 ? "free" : currentSub?.amount}
+          </h2>
+        </div>
+      </div>
+
+     
+    </div>
+
+    <div className="mt-8 flex w-full items-start justify-evenly gap-5 rounded-3xl border-2 border-zinc-200 p-7 h-[49vh]">
+      <div className="h-[250px] w-[300px] rounded-3xl bg-zinc-300"></div>
+      <div className="flex h-[300px] w-1/2 flex-col items-start justify-start gap-1">
+        <p className="text-3xl font-semibold text-[#1D4ED8]">
+          Scan QR with paytm
+        </p>
+        <p className="text-xl font-light text-[#1D4ED8]">Pay with UPI</p>
+        <br />
+        <p className="text-xl font-light text-zinc-400">
+          or Scan with any UPI app
+        </p>
+        <div className="flex items-center justify-center gap-5">
+          <img className="h-8 w-8 object-cover" src={phonepay} alt="" />
+          <img className="h-8 w-8 object-cover" src={gpay} alt="" />
+        </div>
+      </div>
+    </div>
+    <div>
+      <h4 className="text-3xl font-bold  text-[#1D4ED8]">
+        More Payment option
+      </h4>
+      <div className="mt-8 flex h-fit min-h-[300px] w-full flex-col  items-start justify-start rounded-3xl border-2 border-zinc-200 px-3 py-4 ">
+        <button
+          onClick={handlecardinfopanel}
+          className="flex h-full w-full items-center justify-between px-3"
+        >
+          <div className="flex h-[15vh] w-full items-center justify-start gap-4 px-2 py-4">
+            <div>
+              <svg
+                width="32"
+                height="27"
+                viewBox="0 0 32 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31.0007 12.176V22.7743C31.0007 23.6299 30.6846 24.4504 30.1221 25.0553C29.5596 25.6603 28.7966 26.0001 28.0011 26.0001H8.50353C7.70798 26.0001 6.94501 25.6603 6.38247 25.0553C5.81994 24.4504 5.50391 23.6299 5.50391 22.7743V20.355M31.0007 12.176V9.87117C31.0007 9.01564 30.6846 8.19515 30.1221 7.5902C29.5596 6.98525 28.7966 6.64539 28.0011 6.64539H26.5012M31.0007 12.176H26.5012"
+                  stroke="#0086E6"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M26.4968 6.64513V17.1289C26.4968 17.9845 26.1807 18.805 25.6182 19.4099C25.0557 20.0149 24.2927 20.3547 23.4971 20.3547H3.99962C3.20407 20.3547 2.44111 20.0149 1.87857 19.4099C1.31603 18.805 1 17.9845 1 17.1289V4.22579C1 3.37026 1.31603 2.54976 1.87857 1.94481C2.44111 1.33986 3.20407 1 3.99962 1H23.4971C24.2927 1 25.0557 1.33986 25.6182 1.94481C26.1807 2.54976 26.4968 3.37026 26.4968 4.22579V6.64513ZM26.4968 6.64513H6.24933"
+                  stroke="#0086E6"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xl">Debit and Credit Card</p>
+            </div>
+          </div>
+          <div>
+            <img src={arrow} alt />
+          </div>
+        </button>
+        <button className="flex h-full w-full items-center justify-between px-3">
+          <div className="flex h-[15vh] w-full items-center justify-start gap-4 px-2 py-4">
+            <div>
+              <img src={upi} alt="" />
+            </div>
+            <div className="flex flex-col items-start justify-start">
+              <p className="text-xl">UPI</p>
+              <div className="flex items-center justify-center gap-3">
+                <img
+                  className="h-[20px] w-[20px] object-cover"
+                  src={phonepay}
+                  alt=""
+                />
+                <img
+                  className="h-[20px] w-[20px] object-cover"
+                  src={gpay}
+                  alt=""
+                />
+                <img
+                  className="h-[20px] w-[20px] object-cover"
+                  src={paytm}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src={arrow} alt />
+          </div>
+        </button>
+        <button className="flex h-full w-full items-center justify-between px-3">
+          <div className="flex h-[15vh] w-full items-center justify-start gap-4 px-2 py-4">
+            <div>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.8355 2.77155L26.4606 8.70905C26.7724 8.86476 27.0348 9.10434 27.218 9.40088C27.4013 9.69743 27.4983 10.0392 27.4981 10.3878V12.1878C27.4981 13.0503 26.7981 13.7503 25.9356 13.7503H24.9981V23.7503H26.2481C26.5796 23.7503 26.8975 23.882 27.1319 24.1164C27.3664 24.3508 27.4981 24.6688 27.4981 25.0003C27.4981 25.3318 27.3664 25.6498 27.1319 25.8842C26.8975 26.1186 26.5796 26.2503 26.2481 26.2503H3.74805C3.41653 26.2503 3.09858 26.1186 2.86416 25.8842C2.62974 25.6498 2.49805 25.3318 2.49805 25.0003C2.49805 24.6688 2.62974 24.3508 2.86416 24.1164C3.09858 23.882 3.41653 23.7503 3.74805 23.7503H4.99805V13.7503H4.06055C3.19805 13.7503 2.49805 13.0503 2.49805 12.1878V10.3878C2.49805 9.7353 2.83555 9.1353 3.38055 8.7953L14.1593 2.77155C14.4197 2.6413 14.7069 2.57349 14.998 2.57349C15.2892 2.57349 15.5751 2.6413 15.8355 2.77155ZM22.4981 13.7503H7.49805V23.7503H11.248V16.2503H13.748V23.7503H16.248V16.2503H18.7481V23.7503H22.4981V13.7503ZM14.998 5.1478L4.99805 10.7728V11.2503H24.9981V10.7728L14.998 5.1478ZM14.998 7.5003C15.3296 7.5003 15.6475 7.63199 15.8819 7.86641C16.1164 8.10083 16.248 8.41878 16.248 8.7503C16.248 9.08182 16.1164 9.39976 15.8819 9.63418C15.6475 9.8686 15.3296 10.0003 14.998 10.0003C14.6665 10.0003 14.3486 9.8686 14.1142 9.63418C13.8797 9.39976 13.748 9.08182 13.748 8.7503C13.748 8.41878 13.8797 8.10083 14.1142 7.86641C14.3486 7.63199 14.6665 7.5003 14.998 7.5003Z"
+                  fill="#0086E6"
+                />
+              </svg>
+            </div>
+            <div className="flex flex-col items-start justify-start">
+              <p className="text-xl">NetBanking</p>
+              <div className="flex items-center justify-center gap-3 text-zinc-400">
+                all major banks are Support
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src={arrow} alt />
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div className="flex h-fit min-h-[30vh] w-full flex-col items-start justify-start gap-3 rounded-3xl border-2 border-zinc-200  p-10">
+      <div className="flex w-full flex-col items-start justify-center gap-5">
+        <div className="flex flex-col items-start justify-start">
+          <h2 className="text-xl font-semibold text-blue-600">
+            Login to Pay with Paytm
+          </h2>
+          <p className="text-xs text-gray-500">Pay with Paytm wallet</p>
+        </div>
+        <div className="flex h-fit w-full items-center justify-between  ">
+          <div className="ml-4  flex h-[10vh] w-[40%] flex-shrink-0 items-center justify-center rounded-md border-2 border-black px-6 text-xl  ">
+            <span className=" border-r px-2 font-extrabold">+91</span>
+            <input
+              type="text"
+              maxLength={10}
+              placeholder="Enter the Mobile number"
+              className="h-full flex-grow px-2 focus:outline-none"
+              value={phonenumnerforloginpaytm}
+              onChange={(e) => {
+                const value = e.target.value;
+                // Ensure the value contains only digits and is limited to 10 characters
+                if (/^\d{0,10}$/.test(value)) {
+                  setphonenumnerforloginpaytm(value);
+                }
+              }}
+            />
+
+            <button
+              onClick={() => setphonenumnerforloginpaytm("")}
+              className="-pt-1 flex items-center justify-center  rounded-full bg-black px-[5px] font-extrabold text-white  duration-200 hover:bg-white hover:text-black "
+            >
+              <span className="">✕</span>
+            </button>
+          </div>
+          <button className="ml-4 flex h-[10vh] w-[40%] items-center justify-center gap-12 rounded-md border-2 border-blue-500 px-6 text-xl font-extrabold text-blue-500  ">
+            <svg
+              width="20"
+              height="17"
+              viewBox="0 0 10 7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 3.5003L3.66688 6L9 1"
+                stroke="black"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Proceed Securely
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* <div className="flex h-full w-full flex-col items-start justify-start p-3">
+    <fieldset className="w-full rounded-xl border-4 border-black px-1 pb-1">
+      <legend className="ml-4 text-2xl font-semibold">
+        apply your coupon
+      </legend>
+      <input
+        className="h-full w-full rounded-lg p-2 outline-none"
+        type="text"
+      />
+    </fieldset>
+    <button className="ml-4 mt-2 rounded-lg bg-blue-500 p-2 text-white">
+      apply
+    </button>
+  </div> */}
+  </div>
+) : (
+ process ==  1 ?
+   <div className="item-center flex h-fit w-full flex-col mt-[-10%] scale-75 justify-start gap-3 rounded-3xl  p-10">
+ <div className="flex w-full items-center justify-center gap-4 ">
+   <h1 className="text-2xl text-blue-500  ">
+   Subscription Plan{" "}
+   </h1>
+   <div className="flex items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white">
+     <h2 className="text-2xl font-light">
+       {currentSub?.subscriptionName}
+     </h2>
+     <h2 className="text-2xl font-light text-white">
+       {currentSub?.amount !== 0 && "₹"}
+       {currentSub?.amount === 0 ? "free" : currentSub?.amount}
+     </h2>
+   </div>
+ </div>
+ <h1 className="mb-1 mt-1 text-center text-2xl text-blue-500 underline ">
+   Payment gateway{" "}
+ </h1>
+ <div className="flex h-[15vh] w-[35%] rounded-md border-2 border-dashed border-zinc-400 p-3">
+   <div className="font-semi h-full w-[35%] text-center text-2xl">
+     Payment Method
+   </div>
+   <div className="font-semi flex h-full w-[15%] items-center justify-center text-center text-3xl">
+     <img
+       src={mastercard}
+       className="h-[90%] w-full object-cover"
+       alt=""
+     />
+   </div>
+   <div className="font-semi flex h-full w-[15%] items-center justify-center text-center text-3xl">
+     <img
+       src={discover}
+       className="h-[90%] w-full object-cover"
+       alt=""
+     />
+   </div>
+   <div className="font-semi flex h-full w-[15%] items-center justify-center text-center text-3xl">
+     <img
+       src={amaricanexpress}
+       className="h-[90%] w-full object-cover"
+       alt=""
+     />
+   </div>
+   <div className="font-semi flex h-full w-[15%] items-center justify-center text-center text-3xl">
+     <img src={visa} className="h-[90%] w-full object-cover" alt="" />
+   </div>
+ </div>
+ <form className="flex flex-col gap-3">
+   <div className="flex w-full items-start justify-between gap-4">
+     <div className="flex h-fit w-1/2 flex-col items-start justify-center gap-4">
+       <div className="h-fit w-full rounded-lg px-3">
+         <h1 className="text-3xl font-light">Credit card details</h1>
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Name on Card</h2>
+         <input
+           type="text"
+           placeholder="Name"
+           className="input-field"
+         />
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Card Number</h2>
+         {cardNumber.map((num, index) => (
+           <input
+             key={index}
+             id={`card-input-${index}`}
+             type="text"
+             maxLength="4"
+             placeholder="1234"
+             value={num}
+             onChange={(e) => handleChange(index, e.target.value)}
+             onKeyDown={(e) => handleKeyDown(index, e)}
+             className="input-field input-card"
+           />
+         ))}
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Expiry Date</h2>
+         <div className="flex">
+           <input
+             type="text"
+             maxLength="2"
+             placeholder="MM"
+             value={expiryMonth}
+             onChange={(e) => setExpiryMonth(e.target.value)}
+             className="input-field input-expiry"
+           />
+           <input
+             type="text"
+             maxLength="2"
+             placeholder="YY"
+             value={expiryYear}
+             onChange={(e) => setExpiryYear(e.target.value)}
+             className="input-field input-expiry"
+           />
+         </div>
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">CVV</h2>
+         <input
+           type="text"
+           maxLength="3"
+           placeholder="123"
+           value={cvv}
+           onChange={(e) => setCvv(e.target.value)}
+           className="input-field"
+         />
+       </div>
+     </div>
+     <div className="flex h-fit w-1/2 flex-col items-start justify-center gap-4">
+       <h2 className="text-4xl font-light">Address</h2>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Country</h2>
+         <input
+           type="text"
+           placeholder="Country"
+           value={country}
+           onChange={(e) => setCountry(e.target.value)}
+           className="input-field"
+         />
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">State</h2>
+         <input
+           type="text"
+           placeholder="State"
+           value={state}
+           onChange={(e) => setState(e.target.value)}
+           className="input-field"
+         />
+       </div>
+
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Address</h2>
+         <input
+           type="text"
+           placeholder="Address"
+           value={address}
+           onChange={(e) => setAddress(e.target.value)}
+           className="input-field"
+         />
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">City</h2>
+         <input
+           type="text"
+           placeholder="City"
+           value={city}
+           onChange={(e) => setCity(e.target.value)}
+           className="input-field"
+         />
+       </div>
+       <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+         <h2 className="text-xl font-light">Zipcode</h2>
+         <input
+           type="text"
+           placeholder="Zipcode"
+           value={zipcode}
+           onChange={(e) => setZipcode(e.target.value)}
+           className="input-field"
+         />
+       </div>
+     </div>
+   </div>
+   <h2 className="text-4xl font-light">Contact Information</h2>
+   <div className="flex items-center justify-center gap-5 ">
+     <div className="flex h-fit w-full flex-col items-start justify-center rounded-xl border-2 border-zinc-400  px-5 py-3">
+       <h2 className="text-xl font-light">Email</h2>
+       <input
+         type="email"
+         placeholder="Email"
+         value={email}
+         onChange={(e) => setEmail(e.target.value)}
+         className="input-field"
+       />
+     </div>
+     <div className="h-fit w-full rounded-xl border-2 border-zinc-400 px-5 py-3">
+       <h2 className="text-xl font-light">Phone Number</h2>
+       <input
+         type="Number"
+         placeholder="Phone Number"
+         value={phone}
+         onChange={(e) => setPhone(e.target.value)}
+         className="input-field"
+       />
+     </div>
+   </div>
+   <div className="flex items-center justify-between gap-5 ">
+     <button
+       onClick={handlecardinfopanel}
+       className="mt-3 w-full cursor-pointer  rounded-lg border-2 border-blue-500 px-2 py-3 text-center text-xl text-blue-500"
+     >
+       Cancel
+     </button>
+     <input
+       type="submit"
+       value="Submit"
+       className="mt-3 w-full cursor-pointer  rounded-lg border-2 border-blue-500 px-2 py-3 text-center text-xl text-blue-500"
+     />
+   </div>
+ </form>
+</div> : 
+<Invoce currentSub={currentSub}/>
+)}
+</div>

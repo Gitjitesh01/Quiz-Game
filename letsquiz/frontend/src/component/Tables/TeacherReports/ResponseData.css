@@ -1,0 +1,42 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .table {
+    width: 100%;
+    display: table;
+    border-spacing: 0 10px;
+  }
+  
+  .tr {
+    display: table-row;
+  }
+  
+  .td {
+    display: table-cell;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .rank-change-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .rank-change-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .rank-change-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rank-change-exit-active {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+  

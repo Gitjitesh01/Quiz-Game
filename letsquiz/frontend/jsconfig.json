@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "views/*": ["views/*"],
+      "component/*": ["component/*"],
+      "constants/*": ["constants/*"]
+    }
+  }
+}
+

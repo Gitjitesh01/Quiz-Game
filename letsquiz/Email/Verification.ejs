@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message from letquiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            text-align: start;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            
+            
+            
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .header {
+         
+            display: flex;
+
+        }
+        .header img {
+            max-width: 150px;
+        }
+        .heading {
+            font-size: 1em;
+            font-weight: bold;
+            color: black;
+        }
+        .message {
+            margin: 20px 0;
+            padding: 0px 20px;
+            color: black;
+            width: 100%;
+        }
+        .button {
+            background-color: #008cba;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .footer {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .reciver-name {
+            font-size: 1em;
+            
+        }
+        .button-parent
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header ">
+            <img src="data:image/png;base64,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" alt="letquiz">
+        </div>
+        <div class="message">
+            <h4 class="heading">New Message from LetQuiz</h4>
+            <p class="receiver-name">Hi <%= userName %>,</p>
+            <p>You have received a new message from <%= senderName %>.</p>
+            <p>Click the button below to view and reply to the message:</p>
+            <span class="button-parent">
+                <a href="<%= messageLink %>" class="button">View and Reply</a>
+            </span>
+        </div>
+        <div class="message">
+            <p>To complete your registration on LetQuiz, click the button to confirm your email address.</p>
+        </div>
+        <div class="footer">
+            <p>Please note: This is an automated email. Replies to this message will not be received. Use the button above to respond through our platform.</p>
+        </div>
+        
+    </div>
+</body>
+</html>

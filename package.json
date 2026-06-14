@@ -1,0 +1,23 @@
+{
+  "name": "letsquiz-root",
+  "version": "1.0.0",
+  "description": "Root runner for LetsQuiz project containing backend and frontend",
+  "workspaces": [
+    "letsquiz/backend",
+    "letsquiz/frontend"
+  ],
+  "scripts": {
+    "install:backend": "npm install -w letsquiz/backend",
+    "install:frontend": "npm install -w letsquiz/frontend --legacy-peer-deps",
+    "install:all": "npm install",
+    "dev:backend": "npm run dev --prefix letsquiz/backend",
+    "dev:frontend": "npm run dev --prefix letsquiz/frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm run build:frontend",
+    "build:frontend": "npm run build --prefix letsquiz/frontend",
+    "start": "npm start --prefix letsquiz/backend"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
