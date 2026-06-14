@@ -16,10 +16,6 @@
     {
       "source": "/toggleschedule/:path*",
       "destination": "/api"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/letsquiz/frontend/dist/$1"
     }
   ]
 }
