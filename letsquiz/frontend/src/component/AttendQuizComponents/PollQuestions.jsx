@@ -93,7 +93,7 @@ const PollQuestions = ({
   const handleSubmit = async () => {
     if (getCurrentQuestion().type == "wordcloud") {
       try {
-        await axios.post(`https://letsquiz.org/api/wordcloud/${id}`, {
+        await axios.post(`/api/wordcloud/${id}`, {
           data: addAnswer(),
         });
         <FlashMessage duration={5000}>
@@ -291,7 +291,7 @@ const PollQuestions = ({
               <figure>
                 <audio
                   controls
-                  src={`https://letsquiz.org/uploads/audios/${
+                  src={`/uploads/audios/${
                     getCurrentQuestion().audio
                   }`}
                 ></audio>
@@ -304,7 +304,7 @@ const PollQuestions = ({
             ) : (
               <img
                 className="max-h-[700px] w-[500px] object-contain"
-                src={`https://letsquiz.org/uploads/images/${
+                src={`/uploads/images/${
                   getCurrentQuestion().image
                 }`}
                 alt=""

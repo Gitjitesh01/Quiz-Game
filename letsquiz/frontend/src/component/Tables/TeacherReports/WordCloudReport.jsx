@@ -39,7 +39,7 @@ export default function WordCloudReport({ exportToExcel }) {
       const fetchPollData = async () => {
         try {
           const response = await axios.get(
-            `https://letsquiz.org/api/quiz/${selectePoll}`
+            `/api/quiz/${selectePoll}`
           );
           const quizData = response.data.quiz;
           setPollReport(quizData);

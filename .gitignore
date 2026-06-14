@@ -31,3 +31,6 @@ yarn-error.log*
 .next
 **/.next
 letsquiz/frontend/.next
+
+# Root public folder generated at build time
+/public

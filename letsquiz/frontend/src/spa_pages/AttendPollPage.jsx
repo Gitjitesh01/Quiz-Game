@@ -438,7 +438,7 @@ export default function AttendQuizPage() {
     }
     console.log(responseData);
     axios
-      .post("https://letsquiz.org/api/quiz-response", responseData)
+      .post("/api/quiz-response", responseData)
       .then((response) => {
         const resData = response.data.report;
         const objectToSend = {
@@ -449,7 +449,7 @@ export default function AttendQuizPage() {
           },
         };
         axios
-          .put("https://letsquiz.org/api/student-quiz", objectToSend)
+          .put("/api/student-quiz", objectToSend)
           .then((response) => {
             //console.log("Response from the server:", response.data);
             navigate("/dashboard/reports");

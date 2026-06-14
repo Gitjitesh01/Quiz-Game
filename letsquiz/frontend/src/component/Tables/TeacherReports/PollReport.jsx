@@ -190,7 +190,7 @@ const PollGraph = ({ id, setshowdata, showdata }) => {
 
   const FetchPollData = async () => {
     try {
-      const res = await axios.get(`https://letsquiz.org/api/quiz/quiz/${id}`);
+      const res = await axios.get(`/api/quiz/quiz/${id}`);
       setPollData(res.data.quiz);
     } catch (error) {
       console.log(error);

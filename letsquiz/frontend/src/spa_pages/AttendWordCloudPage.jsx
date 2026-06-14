@@ -100,7 +100,7 @@ export default function AttendWordCloudPage() {
       const getUser = async () => {
         try {
           const response = await axios.post(
-            "https://letsquiz.org/api/user-login",
+            "/api/user-login",
             {
               _id: localId,
             }
@@ -128,7 +128,7 @@ export default function AttendWordCloudPage() {
 
   const fetchQuizData = async () => {
     try {
-      const response = await axios.get(`https://letsquiz.org/api/quiz/${id}`);
+      const response = await axios.get(`/api/quiz/${id}`);
       setIsLoading(false);
       const resData = response.data.quiz;
       setQuizData(resData);
@@ -429,7 +429,7 @@ export default function AttendWordCloudPage() {
     }
     console.log(responseData);
     axios
-      .post("https://letsquiz.org/api/quiz-response", responseData)
+      .post("/api/quiz-response", responseData)
       .then((response) => {
         const resData = response.data.report;
         const objectToSend = {
@@ -440,7 +440,7 @@ export default function AttendWordCloudPage() {
           },
         };
         axios
-          .put("https://letsquiz.org/api/student-quiz", objectToSend)
+          .put("/api/student-quiz", objectToSend)
           .then((response) => {
             //console.log("Response from the server:", response.data);
             navigate("/dashboard/reports");

@@ -220,7 +220,7 @@ export function SubscriptionFormModal({ open, onClose, inputData }) {
         console.log(response.data);
       } else {
         await axios.post(
-          'https://letsquiz.org/api/subscription-create',
+          baseUrl + 'subscription-create',
           JSON.stringify(data), // Directly send `data` as the payload
           {
             headers: {

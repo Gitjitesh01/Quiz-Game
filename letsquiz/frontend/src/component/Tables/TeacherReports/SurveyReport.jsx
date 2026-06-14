@@ -16,7 +16,7 @@ export default function SurveyReport({ exportToExcel }) {
 
     // Fetch quiz data using Axios
     axios
-      .post("https://letsquiz.org/api/survey-teacher", { id: localId })
+      .post("/api/survey-teacher", { id: localId })
       .then((response) => {
         setSurveyData(response.data.report);
         //console.log(response.data.report)
@@ -35,7 +35,7 @@ export default function SurveyReport({ exportToExcel }) {
 
     // Make a post request with the selected quiz id and title
     axios
-      .post("https://letsquiz.org/api/quiz-responsebyId/", {
+      .post("/api/quiz-responsebyId/", {
         quizid: selectedQuizId,
       })
       .then((response) => {

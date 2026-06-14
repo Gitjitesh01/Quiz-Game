@@ -345,7 +345,7 @@ const QuizComponent = ({
               <figure>
                 <audio
                   controls
-                  src={`https://letsquiz.org/uploads/audios/${
+                  src={`/uploads/audios/${
                     getCurrentQuestion().audio
                   }`}
                 ></audio>
@@ -359,7 +359,7 @@ const QuizComponent = ({
             ) : (
               <img
                 className="max-h-[200px] w-[300px]  object-contain"
-                src={`https://letsquiz.org/uploads/images/${
+                src={`/uploads/images/${
                   getCurrentQuestion().image
                 }`}
                 alt=""
